@@ -2,20 +2,13 @@
   "name": "reviewsapi",
   "version": "1.0.0",
   "description": "",
-  "main": "config.js",
+  "main": "config.jsa",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/server.js",
-    "mysql": "mysql --local-infile=1 -u root -p",
-    "mysql-load": "mysql --local-infile=1 -u root -p < schema.sql",
-    "mysql-seed": "mysql --local-infile=1 -u root -p < seed.sql",
+    "start": "node server.js",
     "lint": "./node_modules/.bin/eslint",
     "k6": "k6 run --out influxdb=http://localhost:8086/myk6db script.js",
-    "influxdb": "launchctl load ~/Library/LaunchAgents/homebrew.mxcl.influxdb.plist",
-    "reviewsETL": "node ETL/reviewsETL.js",
-    "photosETL": "node ETL/photosETL.js",
-    "characteristicsETL": "node ETL/characteristicsETL.js",
-    "characteristicsReviewsETL": "node ETL/characteristicsReviewsETL.js"
+    "influxdb": "launchctl load ~/Library/LaunchAgents/homebrew.mxcl.influxdb.plist"
   },
   "repository": {
     "type": "git",
